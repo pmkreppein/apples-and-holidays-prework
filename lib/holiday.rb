@@ -60,7 +60,11 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-
+  item_array = []
+  holiday_supplies[:winter].map do |day, item|
+    item_array << item
+  end
+  item_array
 end
 
 def all_holidays_with_bbq(holiday_hash)
